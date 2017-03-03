@@ -14,6 +14,7 @@ D: Rotate right
 ESC: Quit
 
 2. Tower Defense
+
 Open the Xcode file and press build to play the game.
 
 Controls:
@@ -23,7 +24,7 @@ Click on a valid square and press 1 or 2 to build a tower.
 2: Build a frost tower
 ESC: Quit
 
-3.Space Racer
+3. Space Racer
 
 Open the Xcode file and press build to play the game.
 
