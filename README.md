@@ -1,39 +1,46 @@
-README
+1. Asteroids
+Open the Xcode file and press build to play the game.
 
-Name: Ling Jin
+Controls:
 
-Email: lingjin@usc.edu
+W: Move forward
 
-Platform: Mac
+S: Move backward
 
-Overview:
+A: Rotate left
 
-The purpose of this assignment is to generate a 3D heightmap from a grayscale JPEG image. When the program is run, the name of an image file must be passed as a command line argument.
+D: Rotate right
 
-Building the Application:
+ESC: Quit
 
-Make
+2. Tower Defense
+Open the Xcode file and press build to play the game.
 
-Simply navigate to the "hw1-starterCode" folder and type "make." To remove the build directory, type "make clean."
+Controls:
 
-Running the Application:
+Click on a valid square and press 1 or 2 to build a tower.
+1: Build a cannon tower
+2: Build a frost tower
+ESC: Quit
 
-In order to run the application, a single command line argument (the path to a JPEG file) must be specified when the program is run. By default, the program runs in display mode, which rotates the heightfield about the y-axis. To manually rotate, scale, or translate the mesh, press "tab" to switch to modify mode. The full list of commands are listed below.
+3.Space Racer
 
-a: Triangle Draw Mode: Draws the mesh as grayscale triangles.
+Open the Xcode file and press build to play the game.
 
-b: Wireframe Draw Mode: Draws the mesh as a yellow wireframe.
+NOTE: Make sure that the parent directories do not have whitespace in their names.
 
-c: Point Draw Mode: Draws the mesh as a series of purple points.
+Controls:
 
-d: Start animation & Take screenshoot
+W: Rotate upward
 
-Control: Translate the mesh in modify mode.
+S: Rotate downward
 
-Shift: Scale the mesh in modify mode.
+A: Rotate leftward
 
-Escape: Terminate the program.
+D: Rotate rightward
 
-Attributions:
+P: Move forward
 
-The starter code for this project was provided by Dr. Jernej Barbic, PhD.
+;: Move backward
+
+ESC: Quit
