@@ -31,6 +31,8 @@ public:
     GameTimerManager& getTimerManager();
      GameModePtr GetGameMode();
    // NavWorld& GetNavWorld(){ return mNavWorld;}
+    void SetGameOver(){ gameOver = true;};
+    bool GameOver(){return gameOver;};
     
 private:
 	void StartGame();
@@ -57,7 +59,7 @@ private:
     GameModePtr mGameModePtr;
     
    // NavWorld mNavWorld;
-    
+    bool gameOver;
 
 	bool mShouldQuit;
 };

@@ -30,6 +30,7 @@ public:
     void BeginTouch(Actor& other) override;
     void OnRespawnShip();
     void Recenter();
+    void GameOver();
 private:
     
     TexturePtr texturePtrNormal;

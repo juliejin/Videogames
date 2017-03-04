@@ -51,8 +51,8 @@ public:
 	void SetScale(float scale) { mScale = scale; ComputeWorldTransform(); }
 	float GetScale() const { return mScale; }
 
-	void SetRotation(Quaternion rotation) { mRotation = rotation; ComputeWorldTransform(); }
-	Quaternion GetRotation() const { return mRotation; }
+	void SetRotation(const Quaternion& rotation) { mRotation = rotation; ComputeWorldTransform(); }
+	const Quaternion& GetRotation() const { return mRotation; }
 
 	const Matrix4& GetWorldTransform() { return mWorldTransform; }
 

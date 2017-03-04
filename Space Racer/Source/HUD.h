@@ -17,6 +17,9 @@ public:
     void Tick(float deltaTime) override;
     void SetErrorMessage(std::string errorMessage);
     void BeginPlay() override;
+    void UpdateScore(int score);
+    void UpdateTime(int time);
+    void GameOver();
 private:
     void ClearError();
     FontComponentPtr mHealth;
@@ -35,5 +38,7 @@ private:
     FontComponentPtr ScoreFont;
     FontComponentPtr GameOverFont;
     FontComponentPtr TimeRemainingFont;
+    std::string timeStr;
+    std::string scoreStr;
 };
 DECL_PTR(HUD);

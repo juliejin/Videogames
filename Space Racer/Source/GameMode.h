@@ -6,6 +6,7 @@
 #include "HUD.h"
 #include "Ship.h"
 #include "CheckPoint.h"
+#include "Arrow.h"
 
 
 class GameMode : public Actor
@@ -17,7 +18,8 @@ public:
 	void BeginPlay() override;
 	void EndPlay() override;
     void CollectCheckPoint();
-    void CountDown();
+     void ReduceTimer();
+    
     // Get the position that enemies should spawn from
 	//const Vector3& GetSpawnPos() const;
 
@@ -52,5 +54,9 @@ private:
     CheckPointPtr mCheck;
     float score;
     void SpawnRandomCheckPoint();
+     ArrowPtr mArrow;
+    void AddTime(){timer +=5;};
+    int timer;
+    
 };
 DECL_PTR(GameMode);

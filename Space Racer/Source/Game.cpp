@@ -11,6 +11,7 @@ Game::Game()
 	:mRenderer(*this)
 	,mAssetCache(*this, "Assets/")
 	,mShouldQuit(false)
+    ,gameOver(false)
 {
     
 }
@@ -20,8 +21,8 @@ Game::~Game()
 	mAssetCache.Clear();
 	mWorld.RemoveAllActors();
     Mix_CloseAudio();
-	SDL_Quit();
     //TTF_Quit();
+	SDL_Quit();
 }
 
 bool Game::Init()
@@ -131,11 +132,13 @@ GameTimerManager& Game::getTimerManager(){
 
 void Game::Tick()
 {
+   if (!gameOver) {
 	float deltaTime = mTimer.GetFrameTime(0.016666f);
     mTimerManager.Tick(deltaTime);
     
     mWorld.Tick(deltaTime);// TODO
     mPhysWorld.Tick(deltaTime);
+    }
 }
 
 void Game::GenerateOutput()

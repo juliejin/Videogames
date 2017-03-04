@@ -100,3 +100,8 @@ void Ship::Recenter()
     SetRotation(center);
     mCameraComponent->Center();
 }
+
+void Ship::GameOver(){
+    soundCue.Pause();
+    audioComponent->PlaySound(dieSoundPtr);
+}

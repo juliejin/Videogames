@@ -17,6 +17,7 @@
 		18D42EA81E673210009A4609 /* MeshComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18D42EA71E673210009A4609 /* MeshComponent.cpp */; };
 		18D42EAB1E6764C5009A4609 /* CameraComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18D42EAA1E6764C5009A4609 /* CameraComponent.cpp */; };
 		18D42EAE1E69757A009A4609 /* CheckPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18D42EAD1E69757A009A4609 /* CheckPoint.cpp */; };
+		18D42EB11E6A58E9009A4609 /* Arrow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18D42EB01E6A58E9009A4609 /* Arrow.cpp */; };
 		9237DE541B6758C700D06F78 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9237DE521B6758C700D06F78 /* InputManager.cpp */; };
 		92CCAE281B75AA7A00A7791F /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92CCAE261B75AA7A00A7791F /* Font.cpp */; };
 		92CCAE291B75AA7A00A7791F /* FontComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92CCAE271B75AA7A00A7791F /* FontComponent.cpp */; };
@@ -68,6 +69,8 @@
 		18D42EAA1E6764C5009A4609 /* CameraComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraComponent.cpp; sourceTree = "<group>"; };
 		18D42EAC1E6974C9009A4609 /* CheckPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPoint.h; sourceTree = "<group>"; };
 		18D42EAD1E69757A009A4609 /* CheckPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CheckPoint.cpp; sourceTree = "<group>"; };
+		18D42EAF1E6A58D7009A4609 /* Arrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arrow.h; sourceTree = "<group>"; };
+		18D42EB01E6A58E9009A4609 /* Arrow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Arrow.cpp; sourceTree = "<group>"; };
 		92164FE31B636C31000ACF4A /* Sprite.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Sprite.frag; sourceTree = "<group>"; };
 		92164FE41B636C31000ACF4A /* Sprite.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Sprite.vert; sourceTree = "<group>"; };
 		9237DE501B6758B200D06F78 /* InputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputManager.h; sourceTree = "<group>"; };
@@ -215,6 +218,7 @@
 				18D42EA61E67320F009A4609 /* MeshComponent.h */,
 				18D42EA91E675B9A009A4609 /* CameraComponent.h */,
 				18D42EAC1E6974C9009A4609 /* CheckPoint.h */,
+				18D42EAF1E6A58D7009A4609 /* Arrow.h */,
 			);
 			name = Headers;
 			path = Source;
@@ -259,6 +263,7 @@
 				92E46E7A1B634FCA0035CD21 /* World.cpp */,
 				18D42EAA1E6764C5009A4609 /* CameraComponent.cpp */,
 				18D42EAD1E69757A009A4609 /* CheckPoint.cpp */,
+				18D42EB01E6A58E9009A4609 /* Arrow.cpp */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				9237DE541B6758C700D06F78 /* InputManager.cpp in Sources */,
 				92E46E7B1B634FCA0035CD21 /* Actor.cpp in Sources */,
 				92D325071B6974CE005A86C7 /* Mesh.cpp in Sources */,
+				18D42EB11E6A58E9009A4609 /* Arrow.cpp in Sources */,
 				92E46E901B634FCA0035CD21 /* Texture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,6 +25,7 @@ GameMode::GameMode(Game& game)
     mAudioComponentPtr = AudioComponent::Create(*this);
     mSoundPtr = mGame.GetAssetCache().Load<Sound>("Sounds/Checkpoint.wav");
     score = 0.0f;
+    timer = 15;
 }
 
 void GameMode::BeginPlay()
@@ -60,7 +61,13 @@ void GameMode::BeginPlay()
     }
     mShip = Ship::Spawn(mGame);
     hud = HUD::Spawn(mGame);
-
+    hud->UpdateTime(timer);
+    hud->UpdateScore(score);
+    mArrow = Arrow::Spawn(GetGame());
+    mArrow->SetPlayer(mShip);
+    SpawnRandomCheckPoint();
+    TimerHandle mHandle;
+    GetGame().getTimerManager().SetTimer(mHandle, this, &GameMode::ReduceTimer, 1.0f, true);
 }
 
 
@@ -72,15 +79,14 @@ void GameMode::EndPlay()
 
 void GameMode::SpawnRandomCheckPoint()
 {
-    Vector3 ShipPos = mShip->GetPosition();
     float range = 1000.0f + score;
     Vector3 max(range, range, range);
-    Vector3 min = ShipPos - max;
-    max = ShipPos + max;
+    Vector3 min = mShip->GetPosition() - max;
+    max = mShip->GetPosition() + max;
     Vector3 pos = Random::GetVector(min, max);
     mCheck = CheckPoint::Spawn(mGame);
     mCheck->SetPosition(pos);
-    //mArrow->SetCheckpointPos(pos);
+    mArrow->SetCheckPointPos(pos);
 }
 
 void GameMode::CollectCheckPoint()
@@ -88,11 +94,22 @@ void GameMode::CollectCheckPoint()
     mAudioComponentPtr->PlaySound(mSoundPtr);
     SpawnRandomCheckPoint();
     score += 100.00f;
-   // mHUD->UpdateScore(score);
-    //time += 3;
-  //  mHUD->UpdateTime(time);
+    AddTime();
+    hud->UpdateScore(score);
+    hud->UpdateTime(timer);
 }
 
+void GameMode::ReduceTimer()
+{
+    timer -= 1;
+    hud->UpdateTime(timer);
+    if(timer == 0)
+    {
+        mShip->GameOver();
+        hud->GameOver();
+        mGame.SetGameOver();
+    }
+}
 
 
 

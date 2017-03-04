@@ -29,7 +29,7 @@ void MoveComponent::Tick(float deltaTime)
     
     if(!Math::IsZero(mPitchAxis)){
         Quaternion rot = mOwner.GetRotation();
-        float rotation = mPitchSpeed * mYawAxis * deltaTime;
+        float rotation = mPitchSpeed * mPitchAxis * deltaTime;
         Quaternion inc = Quaternion(mOwner.GetWorldTransform().GetYAxis(), rotation);
         rot = Concatenate(rot, inc);
         mOwner.SetRotation(rot);
